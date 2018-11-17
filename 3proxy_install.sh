@@ -98,17 +98,16 @@ case $DNS in
 	echo 'nscache 65536
 	
 timeouts 1 5 30 60 180 1800 15 60
-
+users 17t3081104:CL:5gt9IrYEaS
 log /dev/null
 
 
 #Binding address' >> /opt/3proxy/3proxy.cfg
 			echo "external $IP" >> /opt/3proxy/3proxy.cfg
 			echo '#SOCKS5
-auth none
+auth strong
 flush
 allow *
-#allow * * 91.108.4.0/22,91.108.8.0/22,91.108.56.0/22,149.154.160.0/20,149.154.164.0/22,91.108.16.0/22,91.108.56.0/23,149.154.168.0/22,91.108.12.0/22,149.154.172.0/22,91.108.20.0/22,91.108.36.0/23,91.108.38.0/23,109.239.140.0/24,149.154.174.0/24
 maxconn 64' >> /opt/3proxy/3proxy.cfg
 echo "socks -p$PORT" >> /opt/3proxy/3proxy.cfg
 			
